@@ -4,11 +4,14 @@ from itertools import permutations
 
 
 def get_distance(point_1, point_2):
+    """Получение расстояния между двумя точками"""
     return ((point_2[0] - point_1[0]) ** 2 +
             (point_2[1] - point_1[1]) ** 2) ** 0.5
 
 
 def get_path(addresses):
+    """Получение пути - словаря с точками пути и суммарным
+    расстоянием между ними"""
     post_office = (0, 2)  # координаты почтового отделения
     result = {'points': [post_office], 'distances': []}
     points = (*addresses, post_office)
