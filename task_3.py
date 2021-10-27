@@ -27,7 +27,7 @@ class Shape:
     def input_num(message: str):
         while True:
             num = input(message)
-            if num.isdigit and float(num) > 0:
+            if num.isdigit() and float(num) > 0:
                 return float(num)
             print("Ошибка! Введите число, > 0: ")
 
