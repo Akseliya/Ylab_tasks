@@ -36,12 +36,7 @@ for path_point in path_points:
     if current_path['distances'][-1] < min_path['distances'][-1]:
         min_path = current_path
 
-print(
-    f"{min_path['points'][0]} -> "
-    f"{min_path['points'][1]}[{min_path['distances'][0]}] -> "
-    f"{min_path['points'][2]}[{min_path['distances'][1]}] -> "
-    f"{min_path['points'][3]}[{min_path['distances'][2]}] -> "
-    f"{min_path['points'][4]}[{min_path['distances'][3]}] -> "
-    f"{min_path['points'][5]}[{min_path['distances'][4]}] = "
-    f"{min_path['distances'][4]}"
-)
+print(f"{min_path['points'][0]} -> ", end='')
+for i in range(len(min_path['distances'])):
+	print(f"{min_path['points'][i + 1]}[{min_path['distances'][i]}] -> ", end='')
+print(f"{min_path['distances'][-1]}")
